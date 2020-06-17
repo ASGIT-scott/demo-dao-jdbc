@@ -33,7 +33,7 @@ public class Program {
 			System.out.println(obj);
 		}
 
-/*		System.out.println("\n==== Teste 4: Seller insert ====");
+		System.out.println("\n==== Teste 4: Seller insert ====");
 		Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.0, department);
 		sellerDao.insert(newSeller);
 		System.out.println("Registro inserido! Id = " + newSeller.getId());
@@ -42,7 +42,7 @@ public class Program {
 		newSeller = sellerDao.findById(7);
 		newSeller.setName("Martha Weine");
 		sellerDao.update(newSeller);
-		System.out.println("Registro alterado!"); */
+		System.out.println("Registro alterado!");
 
 		System.out.println("\n==== Teste 6: Seller delete ====");
 		System.out.print("Entre com o Id para deletar: ");
