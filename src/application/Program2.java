@@ -1,5 +1,6 @@
 package application;
 
+import java.util.List;
 import java.util.Scanner;
 
 import model.dao.DaoFactory;
@@ -20,9 +21,28 @@ public class Program2 {
 		System.out.println(department);
 		
 		System.out.println("\n==== Teste 2: Department findAll ====");
+		List<Department> list = departmentDao.findAll();
+		for (Department dep : list) {
+			System.out.println(dep);
+		}
+
+		System.out.println("\n==== Teste 3: Department insert ====");
+		Department newDepartment = new Department(null, "teste insert");
+		departmentDao.insert(newDepartment);
+		System.out.println("Departamento inserido! Id: " + newDepartment.getId());
+		
+		System.out.println("\n==== Teste 4: Department update ====");
+		newDepartment = new Department(7, "Teste Update");
+		departmentDao.update(newDepartment);
+		System.out.println("Update executado!");
+
+		System.out.println("\n==== Teste 5: Seller delete ====");
+		System.out.print("Informe o ID do Departamento p/ exclusao: ");
+		id = sc.nextInt();
+		departmentDao.deleteById(id);
+		System.out.println("Departamento excluído!");
 
 		sc.close();
 
 	}
-
 }
